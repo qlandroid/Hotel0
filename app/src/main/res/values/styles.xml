@@ -8,4 +8,15 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="div_x">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/x1</item>
+        <item name="android:background">@color/divColor</item>
+    </style>
+    <style name="div_y">
+        <item name="android:layout_width">@dimen/x1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/divColor</item>
+    </style>
+
 </resources>

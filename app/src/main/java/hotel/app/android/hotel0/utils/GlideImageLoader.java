@@ -1,6 +1,7 @@
 package hotel.app.android.hotel0.utils;
 
 import android.content.Context;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -25,5 +26,12 @@ public class GlideImageLoader extends ImageLoader {
         Glide.with(context).load(path).into(imageView);
 
     }
-
+    //提供createImageView 方法，如果不用可以不重写这个方法，方便fresco自定义ImageView
+    @Override
+    public ImageView createImageView(Context context) {
+        ImageView imageView=new ImageView(context);
+        imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+        return imageView;
+    }
 }

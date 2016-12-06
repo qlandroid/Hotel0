@@ -1,20 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <com.youth.banner.Banner
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        app:indicator_width="@dimen/x6"
-        app:indicator_height="@dimen/x6"
-        app:indicator_margin="@dimen/x6"
-        app:image_scale_type="fit_xy"
-        android:id="@+id/banner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a9a9a9"
+    android:orientation="vertical">
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x150" />
-    <TextView
-        android:gravity="center"
-        android:textSize="40sp"
-        android:text="这是home"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:image_scale_type="fit_xy"
+                app:indicator_height="@dimen/x6"
+                app:indicator_margin="@dimen/x6"
+                app:indicator_width="@dimen/x6" />
+
+            <android.support.v7.widget.RecyclerView
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginBottom="6dp"
+                android:background="#fff"
+                android:id="@+id/rv_gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include layout="@layout/include_man_icon" />
+
+            <TextView
+                android:background="#fff"
+                android:layout_marginTop="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:text="最新打折酒店"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:background="#fff"
+                android:overScrollMode="never"
+                android:isScrollContainer="false"
+                android:id="@+id/rv_hotel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:background="#fff"
+                android:layout_marginTop="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:text="最新公寓"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:overScrollMode="never"
+                android:background="#fff"
+                android:isScrollContainer="false"
+                android:id="@+id/rv_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:clickable="true"
+                android:text="已经到底了"
+                android:textSize="16sp"
+                android:background="#ccc"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>

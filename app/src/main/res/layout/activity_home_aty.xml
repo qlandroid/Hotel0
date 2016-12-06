@@ -11,6 +11,8 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"/>
+    <View
+        style="@style/div_x"/>
     <hotel.app.android.hotel0.ui.view.NavigationGroupView
         android:id="@+id/ngv_radioButton"
         android:layout_width="match_parent"

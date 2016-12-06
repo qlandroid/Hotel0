@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:layout_height="72dp">
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/banner_icon_2"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:layout_marginLeft="6dp"
+        android:id="@+id/tv_name"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:textColor="#876b6b"
+        android:text="如家酒店上海万达广场附近"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_mark"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        android:layout_below="@+id/tv_name"
+        android:layout_alignLeft="@+id/tv_name"
+        android:text="5.0分"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_alignLeft="@+id/tv_mark"
+        android:layout_below="@+id/tv_mark"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="地标:世纪大道"/>
+    <TextView
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@+id/tv_unit"
+        android:layout_alignParentBottom="true"
+        android:text="178"
+        android:textSize="18sp"
+        android:textColor="#ff0000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/tv_unit"
+        android:textColor="#ff0000"
+        android:text="元起"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
