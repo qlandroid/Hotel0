@@ -10,12 +10,16 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/pulltoRefresh" />
+            <option value="$PROJECT_DIR$/pulltoRefresh/library" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/pulltoRefresh" />
+            <option value="$PROJECT_DIR$/pulltoRefresh/library" />
           </set>
         </option>
       </GradleProjectSettings>

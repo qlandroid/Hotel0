@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -35,6 +36,8 @@ import hotel.app.android.hotel0.utils.SpaceItemDecoration;
  * Created by Administrator on 2016-12-5.
  */
 public class ManFrag extends KJFragment {
+    @BindView(id = R.id.tv_title)
+    TextView tvTitle;
     @BindView(id = R.id.banner)
     Banner banner;
     @BindView(id = R.id.rv_gridView)
@@ -63,6 +66,7 @@ public class ManFrag extends KJFragment {
     @Override
     protected void initWidget(View parentView) {
         super.initWidget(parentView);
+        tvTitle.setText("首页");
         initBanner();
         setManGridBtn();
         rvHome.setLayoutManager(new LinearLayoutManager(getActivity()){

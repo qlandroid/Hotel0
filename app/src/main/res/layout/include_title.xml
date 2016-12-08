@@ -2,8 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:background="@color/colorAccent"
-    android:layout_height="?android:attr/actionBarSize">
+    android:layout_height="@dimen/x38">
     <ImageView
+        android:visibility="gone"
         android:layout_alignParentLeft="true"
         android:padding="@dimen/x4"
         android:layout_centerVertical="true"
