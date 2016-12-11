@@ -1,9 +1,11 @@
 package hotel.app.android.hotel0.ui.frag;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -21,6 +23,7 @@ import java.util.List;
 import hotel.app.android.hotel0.R;
 import hotel.app.android.hotel0.ui.adapter.HomeListViewAdapter;
 import hotel.app.android.hotel0.ui.adapter.HomeTableSelectAdapter;
+import hotel.app.android.hotel0.ui.aty.HomeDetailsActivity;
 
 /**
  * Created by Administrator on 2016-12-5.
@@ -158,6 +161,12 @@ public class FlatFrag extends KJFragment {
         }
         HomeListViewAdapter adapter = new HomeListViewAdapter(getActivity(), list, R.layout.item_home_layout);
         mPullToRefreshListView.setAdapter(adapter);
+        mPullToRefreshListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(getActivity(), HomeDetailsActivity.class));
+            }
+        });
         dropDownMenu.setDropDownMenu(mTableList, mViewList, mPullToRefreshListView);
     }
 }
