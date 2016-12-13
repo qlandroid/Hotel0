@@ -137,7 +137,7 @@ public class HomeDetailsView extends LinearLayout {
         }
         @Override
         public HomeDetailsItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_home_details,parent
+            View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_home_details_type,parent
             ,false);
             HomeDetailsItemViewHolder holder = new HomeDetailsItemViewHolder(itemView);
             return holder;

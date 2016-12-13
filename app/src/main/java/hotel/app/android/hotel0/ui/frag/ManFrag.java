@@ -1,5 +1,6 @@
 package hotel.app.android.hotel0.ui.frag;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -28,6 +29,8 @@ import hotel.app.android.hotel0.inter.OnItemClickListener;
 import hotel.app.android.hotel0.ui.adapter.GridAdapter;
 import hotel.app.android.hotel0.ui.adapter.HomeAdapter;
 import hotel.app.android.hotel0.ui.adapter.HotelAdapter;
+import hotel.app.android.hotel0.ui.aty.HomeDetailsAty;
+import hotel.app.android.hotel0.ui.aty.HotelDetailsAty;
 import hotel.app.android.hotel0.utils.DividerItemDecoration;
 import hotel.app.android.hotel0.utils.GlideImageLoader;
 import hotel.app.android.hotel0.utils.SpaceItemDecoration;
@@ -87,14 +90,25 @@ public class ManFrag extends KJFragment {
         for (int i = 0; i < 10; i++) {
             homeList.add(new HomeBean());
         }
-        HomeAdapter homeAdapter = new HomeAdapter(getActivity(),homeList);
+        HomeAdapter homeAdapter = new HomeAdapter(getActivity(), homeList, new OnItemClickListener() {
+            @Override
+            public void onClick(View v, int position) {
+                startActivity(new Intent(getActivity(), HomeDetailsAty.class));
+            }
+        });
         rvHome.setAdapter(homeAdapter);
         List<HotelBean> hotelList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             hotelList.add(new HotelBean());
         }
-        HotelAdapter hotelAdapter = new HotelAdapter(getActivity(),hotelList);
+        HotelAdapter hotelAdapter = new HotelAdapter(getActivity(), hotelList, new OnItemClickListener() {
+            @Override
+            public void onClick(View v, int position) {
+                startActivity(new Intent(getActivity(), HotelDetailsAty.class));
+            }
+        });
         rvHotel.setAdapter(hotelAdapter);
+
 
     }
 

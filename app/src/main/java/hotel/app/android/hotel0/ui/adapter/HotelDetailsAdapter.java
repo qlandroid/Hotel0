@@ -10,51 +10,50 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import hotel.app.android.hotel0.R;
-import hotel.app.android.hotel0.bean.HotelBean;
 import hotel.app.android.hotel0.inter.OnItemClickListener;
 
 /**
- * 酒店列表；
- * Created by Administrator on 2016-12-6.
+ * Created by Administrator on 2016-12-12.
  */
-public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.HotelViewHolder> implements OnClickListener{
+public class HotelDetailsAdapter extends RecyclerView.Adapter<HotelDetailsAdapter.HomeDetailsViewHolder> implements OnClickListener{
     private Context mContext;
-    private List<HotelBean> mDataList;
+    private List mDataList;
     private OnItemClickListener mListener;
 
-    public HotelAdapter(Context mContext, List<HotelBean> mDataList,OnItemClickListener mListener) {
+    public HotelDetailsAdapter(Context mContext, List mDataList, OnItemClickListener mListener) {
         this.mContext = mContext;
         this.mDataList = mDataList;
         this.mListener = mListener;
     }
 
     @Override
-    public HotelViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_hotel_layout,parent,false);
-        HotelViewHolder hotel = new HotelViewHolder(itemView);
-        return hotel;
+    public HomeDetailsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_home_details_layout,parent,false);
+        HomeDetailsViewHolder  holder = new HomeDetailsViewHolder(itemView);
+        return holder;
     }
 
     @Override
-    public void onBindViewHolder(HotelViewHolder holder, int position) {
+    public void onBindViewHolder(HomeDetailsViewHolder holder, int position) {
         holder.itemView.setTag(position);
         holder.itemView.setOnClickListener(this);
     }
 
     @Override
     public int getItemCount() {
-        return mDataList == null ? 0 : mDataList.size();
+        return mDataList == null?0 : mDataList.size();
     }
 
     @Override
     public void onClick(View v) {
         int position = (int) v.getTag();
         mListener.onClick(v,position);
+
     }
 
-    class HotelViewHolder extends RecyclerView.ViewHolder{
-        View itemView;
-        public HotelViewHolder(View itemView) {
+    class HomeDetailsViewHolder extends RecyclerView.ViewHolder{
+        View itemView ;
+        public HomeDetailsViewHolder(View itemView) {
             super(itemView);
             this.itemView = itemView;
         }

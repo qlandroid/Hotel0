@@ -1,9 +1,11 @@
 package hotel.app.android.hotel0.ui.frag;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -21,6 +23,7 @@ import java.util.List;
 import hotel.app.android.hotel0.R;
 import hotel.app.android.hotel0.ui.adapter.HomeTableSelectAdapter;
 import hotel.app.android.hotel0.ui.adapter.HotelListViewAdapter;
+import hotel.app.android.hotel0.ui.aty.HotelDetailsAty;
 
 /**
  * Created by Administrator on 2016-12-5.
@@ -76,7 +79,6 @@ public class HotelFrag extends KJFragment {
         distanceListView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, mUiHeight / 2));
         View moreView = inflater.inflate(R.layout.item_flat_table_select_money, null, false);
         ListView moreListView = (ListView) moreView.findViewById(R.id.lv);
-        ;
         moreListView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, mUiHeight / 2));
         initFlatTableDistanceView(distanceListView);
         initFlatTableMoreView(moreListView);
@@ -159,6 +161,12 @@ public class HotelFrag extends KJFragment {
         }
         HotelListViewAdapter adapter = new HotelListViewAdapter(getActivity(), list, R.layout.item_hotel_layout);
         mPullToRefreshListView.setAdapter(adapter);
+        mPullToRefreshListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(getActivity(), HotelDetailsAty.class));
+            }
+        });
         dropDownMenu.setDropDownMenu(mTableList, mViewList, mPullToRefreshListView);
     }
 }

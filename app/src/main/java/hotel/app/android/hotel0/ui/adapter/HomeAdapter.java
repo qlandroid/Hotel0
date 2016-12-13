@@ -10,17 +10,20 @@ import java.util.List;
 
 import hotel.app.android.hotel0.R;
 import hotel.app.android.hotel0.bean.HomeBean;
+import hotel.app.android.hotel0.inter.OnItemClickListener;
 
 /**
  * 公寓的适配器；
  * Created by Administrator on 2016-12-6.
  */
-public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> {
+public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> implements View.OnClickListener{
     private Context mContext;
     private List<HomeBean> mDataList;
+    private OnItemClickListener mListener;
 
-    public HomeAdapter(Context mContext, List<HomeBean> mDataList) {
+    public HomeAdapter(Context mContext, List<HomeBean> mDataList,OnItemClickListener mListener) {
         this.mContext = mContext;
+        this.mListener = mListener;
         this.mDataList = mDataList;
     }
 
@@ -33,7 +36,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
 
     @Override
     public void onBindViewHolder(HomeViewHolder holder, int position) {
-
+        holder.itemView.setTag(position);
+        holder.itemView.setOnClickListener(this);
     }
 
     @Override
@@ -41,10 +45,17 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
         return mDataList == null ? 0 : mDataList.size();
     }
 
-    class HomeViewHolder extends RecyclerView.ViewHolder{
+    @Override
+    public void onClick(View v) {
+        int position = (int) v.getTag();
+        mListener.onClick(v,position);
+    }
 
+    class HomeViewHolder extends RecyclerView.ViewHolder{
+        View  itemView;
         public HomeViewHolder(View itemView) {
             super(itemView);
+            this.itemView = itemView;
         }
     }
 }

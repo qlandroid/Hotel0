@@ -7,7 +7,7 @@
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="hotel.app.android.hotel0.ui.aty.HomeDetailsActivity">
+    tools:context=".ui.aty.HomeDetailsAty">
 
     <include layout="@layout/include_title" />
 
@@ -125,7 +125,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
+        <TextView
+            android:clickable="true"
+            android:id="@+id/tv_lookHome"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ff0000"
+            android:gravity="center"
+            android:paddingBottom="@dimen/x10"
+            android:paddingTop="@dimen/x10"
+            android:text="预约看房"
+            android:textColor="#fff" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
         <TextView
             android:textSize="18sp"
             android:layout_width="0dp"

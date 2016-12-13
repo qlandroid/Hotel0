@@ -1,5 +1,6 @@
 package hotel.app.android.hotel0.ui.aty;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,7 +17,7 @@ import hotel.app.android.hotel0.ui.base.BaseActivity;
 import hotel.app.android.hotel0.ui.view.HomeDetailsView;
 import hotel.app.android.hotel0.utils.GlideImageLoader;
 
-public class HomeDetailsActivity extends BaseActivity {
+public class HomeDetailsAty extends BaseActivity {
 
     @BindView(id = R.id.hdv_detailsItem)
     HomeDetailsView hdvDetailsItem;
@@ -26,6 +27,8 @@ public class HomeDetailsActivity extends BaseActivity {
     ImageView ivToBack;
     @BindView(id = R.id.banner)
     Banner banner;
+    @BindView(id = R.id.tv_lookHome,click = true)
+    TextView tvLookHome;
 
     private ArrayList<Integer> mBannerIconList;
 
@@ -61,8 +64,19 @@ public class HomeDetailsActivity extends BaseActivity {
             case R.id.iv_toBack:
                 finish();
                 break;
+            case R.id.tv_lookHome:
+                onClickLookHome();
+                break;
         }
     }
+
+    /**
+     * 点击看房
+     */
+    private void onClickLookHome() {
+        startActivity(new Intent(this,LookHomeAty.class));
+    }
+
     private void initBanner() {
         //设置banner样式
         //+banner.setBannerStyle(BannerConfig.);
