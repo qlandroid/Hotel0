@@ -19,10 +19,14 @@
         </activity>
         <activity android:name=".ui.aty.RegisterAty" />
         <activity android:name=".ui.aty.RetrieveAty" />
-        <activity android:name=".ui.aty.HomeDetailsAty" />
+        <activity android:name=".ui.aty.FlatLongDetailsAty" />
         <activity android:name=".ui.aty.HotelDetailsAty" />
         <activity android:name=".ui.aty.HotelSubmitOrderAty" />
-        <activity android:name=".ui.aty.LookHomeAty"></activity>
+        <activity android:name=".ui.aty.LookHomeAty" />
+        <activity android:name=".ui.aty.HotelDetailsBookedAty" />
+        <activity android:name=".ui.aty.HotelCloseAty" />
+        <activity android:name=".ui.aty.UserDetailsAty" />
+        <activity android:name=".ui.aty.FlatSmallDetailsAty"></activity>
     </application>
 
 </manifest>

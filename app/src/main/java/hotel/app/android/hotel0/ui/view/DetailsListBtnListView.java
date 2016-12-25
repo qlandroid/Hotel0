@@ -14,7 +14,6 @@ import android.widget.TextView;
 import java.util.List;
 
 import hotel.app.android.hotel0.R;
-import hotel.app.android.hotel0.inter.OnItemClickListener;
 
 /**
  * Created by Administrator on 2016-12-11.
@@ -45,6 +44,18 @@ public class DetailsListBtnListView extends RecyclerView {
     public static class BtnBean{
         private String name;
         private int iconId;
+        /**
+         * 用于控制点击事件；
+         */
+        private int clickType;
+
+        public int getClickType() {
+            return clickType;
+        }
+
+        public void setClickType(int clickType) {
+            this.clickType = clickType;
+        }
 
         public String getName() {
             return name;
@@ -81,9 +92,10 @@ public class DetailsListBtnListView extends RecyclerView {
         }
         @Override
         public void onBindViewHolder(DetailsBtnViewHolder holder, int position) {
-            holder.itemView.setTag(position);
-            holder.itemView.setOnClickListener(this);
+
             BtnBean bean = mDataList.get(position);
+            holder.itemView.setTag(bean.getClickType());
+            holder.itemView.setOnClickListener(this);
             holder.name.setText(bean.getName());
             holder.icon.setImageResource(bean.getIconId());
         }
@@ -95,11 +107,11 @@ public class DetailsListBtnListView extends RecyclerView {
 
         @Override
         public void onClick(View v) {
-            int position = (int) v.getTag();
+            int clickType = (int) v.getTag();
             if (mListener == null){
                 throw new RuntimeException("必须设置监听事件");
             }
-            mListener.onClick(v,position);
+            mListener.onClickItem(v,clickType);
 
         }
 
@@ -114,5 +126,8 @@ public class DetailsListBtnListView extends RecyclerView {
                 icon = (ImageView) itemView.findViewById(R.id.iv_icon);
             }
         }
+    }
+    public interface OnItemClickListener{
+        void onClickItem(View v,int clickType);
     }
 }

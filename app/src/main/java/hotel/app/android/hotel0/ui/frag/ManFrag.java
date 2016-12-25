@@ -29,7 +29,7 @@ import hotel.app.android.hotel0.inter.OnItemClickListener;
 import hotel.app.android.hotel0.ui.adapter.GridAdapter;
 import hotel.app.android.hotel0.ui.adapter.HomeAdapter;
 import hotel.app.android.hotel0.ui.adapter.HotelAdapter;
-import hotel.app.android.hotel0.ui.aty.HomeDetailsAty;
+import hotel.app.android.hotel0.ui.aty.FlatLongDetailsAty;
 import hotel.app.android.hotel0.ui.aty.HotelDetailsAty;
 import hotel.app.android.hotel0.utils.DividerItemDecoration;
 import hotel.app.android.hotel0.utils.GlideImageLoader;
@@ -93,7 +93,7 @@ public class ManFrag extends KJFragment {
         HomeAdapter homeAdapter = new HomeAdapter(getActivity(), homeList, new OnItemClickListener() {
             @Override
             public void onClick(View v, int position) {
-                startActivity(new Intent(getActivity(), HomeDetailsAty.class));
+                startActivity(new Intent(getActivity(), FlatLongDetailsAty.class));
             }
         });
         rvHome.setAdapter(homeAdapter);

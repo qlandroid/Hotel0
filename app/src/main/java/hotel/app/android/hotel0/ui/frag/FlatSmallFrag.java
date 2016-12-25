@@ -23,12 +23,13 @@ import java.util.List;
 import hotel.app.android.hotel0.R;
 import hotel.app.android.hotel0.ui.adapter.HomeListViewAdapter;
 import hotel.app.android.hotel0.ui.adapter.HomeTableSelectAdapter;
-import hotel.app.android.hotel0.ui.aty.HomeDetailsAty;
+import hotel.app.android.hotel0.ui.aty.FlatLongDetailsAty;
 
 /**
- * Created by Administrator on 2016-12-5.
+ * 功能：短租房列表；
+ * Created by Administrator on 2016-12-25.
  */
-public class FlatFrag extends KJFragment {
+public class FlatSmallFrag extends KJFragment {
     @BindView(id = R.id.dropDownMenu)
     DropDownMenu dropDownMenu;
     @BindView(id = R.id.tv_title)
@@ -41,7 +42,7 @@ public class FlatFrag extends KJFragment {
 
     @Override
     protected View inflaterView(LayoutInflater inflater, ViewGroup container, Bundle bundle) {
-        return inflater.inflate(R.layout.frag_flat_layout, container, false);
+        return inflater.inflate(R.layout.frag_flat_small_layout, container, false);
     }
 
     @Override
@@ -78,7 +79,6 @@ public class FlatFrag extends KJFragment {
         distanceListView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, mUiHeight / 2));
         View moreView = inflater.inflate(R.layout.item_flat_table_select_money, null, false);
         ListView moreListView = (ListView) moreView.findViewById(R.id.lv);
-        ;
         moreListView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, mUiHeight / 2));
         initFlatTableDistanceView(distanceListView);
         initFlatTableMoreView(moreListView);
@@ -140,7 +140,7 @@ public class FlatFrag extends KJFragment {
     @Override
     protected void initWidget(View parentView) {
         super.initWidget(parentView);
-        tvTitle.setText("FlatHome");
+        tvTitle.setText("FlatSmallHome");
         mPullToRefreshListView = new PullToRefreshListView(getActivity());
         mPullToRefreshListView.setMode(PullToRefreshBase.Mode.BOTH);
         mPullToRefreshListView.setLayoutParams(new DropDownMenu.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
@@ -164,7 +164,7 @@ public class FlatFrag extends KJFragment {
         mPullToRefreshListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(getActivity(), HomeDetailsAty.class));
+                startActivity(new Intent(getActivity(), FlatLongDetailsAty.class));
             }
         });
         dropDownMenu.setDropDownMenu(mTableList, mViewList, mPullToRefreshListView);

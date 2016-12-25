@@ -7,7 +7,7 @@
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context=".ui.aty.HomeDetailsAty">
+    tools:context=".ui.aty.FlatLongDetailsAty">
 
     <include layout="@layout/include_title" />
 

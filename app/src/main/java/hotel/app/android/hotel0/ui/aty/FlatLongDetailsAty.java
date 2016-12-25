@@ -17,7 +17,7 @@ import hotel.app.android.hotel0.ui.base.BaseActivity;
 import hotel.app.android.hotel0.ui.view.HomeDetailsView;
 import hotel.app.android.hotel0.utils.GlideImageLoader;
 
-public class HomeDetailsAty extends BaseActivity {
+public class FlatLongDetailsAty extends BaseActivity {
 
     @BindView(id = R.id.hdv_detailsItem)
     HomeDetailsView hdvDetailsItem;
@@ -34,7 +34,7 @@ public class HomeDetailsAty extends BaseActivity {
 
     @Override
     public void setRootView() {
-        setContentView(R.layout.activity_home_details);
+        setContentView(R.layout.activity_flat_long_details_aty);
     }
 
     @Override

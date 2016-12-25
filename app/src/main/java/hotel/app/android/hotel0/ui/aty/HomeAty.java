@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import hotel.app.android.hotel0.R;
 import hotel.app.android.hotel0.ui.base.BaseActivity;
 import hotel.app.android.hotel0.ui.frag.DetailsFrag;
-import hotel.app.android.hotel0.ui.frag.FlatFrag;
+import hotel.app.android.hotel0.ui.frag.FlatLongFrag;
+import hotel.app.android.hotel0.ui.frag.FlatSmallFrag;
 import hotel.app.android.hotel0.ui.frag.HotelFrag;
 import hotel.app.android.hotel0.ui.frag.ManFrag;
 import hotel.app.android.hotel0.ui.view.NavigationGroupView;
@@ -17,8 +18,8 @@ public class HomeAty extends BaseActivity {
     @BindView(id = R.id.ngv_radioButton)
     NavigationGroupView ngvRadioButton;
 
-    private String[] mRadioBtnNames = {"首页", "酒店", "公寓", "个人"};
-    private int[] mRadioBtnIcons = {R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher,
+    private String[] mRadioBtnNames = {"首页", "酒店","短租公寓", "长租公寓", "个人"};
+    private int[] mRadioBtnIcons = {R.mipmap.ic_launcher,R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher,
             R.mipmap.ic_launcher};
 
     private ArrayList<KJFragment> mFragmentList;
@@ -33,7 +34,8 @@ public class HomeAty extends BaseActivity {
         mFragmentList = new ArrayList<>();
         mFragmentList.add(new ManFrag());
         mFragmentList.add(new HotelFrag());
-        mFragmentList.add(new FlatFrag());
+        mFragmentList.add(new FlatSmallFrag());
+        mFragmentList.add(new FlatLongFrag());
         mFragmentList.add(new DetailsFrag());
     }
 
