@@ -34,4 +34,5 @@ dependencies {
     //仿美团下拉筛选
     compile 'com.github.dongjunkun:DropDownMenu:1.0.3'
     compile project(':pulltoRefresh:library')
+    compile project(':CalendarLibrary')
 }

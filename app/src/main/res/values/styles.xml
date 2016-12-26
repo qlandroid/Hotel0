@@ -19,4 +19,11 @@
         <item name="android:background">@color/divColor</item>
     </style>
 
+    <style name="detailsNameLayout">
+        <item name="android:paddingTop">@dimen/x6</item>
+        <item name="android:paddingBottom">@dimen/x6</item>
+        <item name="android:paddingLeft">@dimen/x10</item>
+        <item name="android:paddingRight">@dimen/x10</item>
+    </style>
+
 </resources>

@@ -17,6 +17,9 @@ import hotel.app.android.hotel0.ui.base.BaseActivity;
 import hotel.app.android.hotel0.ui.view.HomeDetailsView;
 import hotel.app.android.hotel0.utils.GlideImageLoader;
 
+/**
+ * 功能：长租房详情页；
+ */
 public class FlatLongDetailsAty extends BaseActivity {
 
     @BindView(id = R.id.hdv_detailsItem)
@@ -29,6 +32,8 @@ public class FlatLongDetailsAty extends BaseActivity {
     Banner banner;
     @BindView(id = R.id.tv_lookHome,click = true)
     TextView tvLookHome;
+    @BindView(id = R.id.tv_submitFlatOrder,click = true)
+    TextView tvSubmitFlatOrder;
 
     private ArrayList<Integer> mBannerIconList;
 
@@ -67,7 +72,17 @@ public class FlatLongDetailsAty extends BaseActivity {
             case R.id.tv_lookHome:
                 onClickLookHome();
                 break;
+            case R.id.tv_submitFlatOrder:
+                onClickSubmitFlatOrder();
+                break;
         }
+    }
+
+    /**
+     * 功能：点击直接订房：
+     */
+    private void onClickSubmitFlatOrder() {
+         startActivity(new Intent(this,FlatLongSubmitOrderAty.class));
     }
 
     /**
@@ -77,6 +92,9 @@ public class FlatLongDetailsAty extends BaseActivity {
         startActivity(new Intent(this,LookHomeAty.class));
     }
 
+    /**
+     *  功能：初始化轮播图
+     */
     private void initBanner() {
         //设置banner样式
         //+banner.setBannerStyle(BannerConfig.);

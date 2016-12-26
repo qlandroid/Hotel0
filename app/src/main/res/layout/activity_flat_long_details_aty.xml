@@ -142,6 +142,7 @@
             android:layout_width="1dp"
             android:layout_height="match_parent"/>
         <TextView
+            android:id="@+id/tv_submitFlatOrder"
             android:textSize="18sp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -150,7 +151,7 @@
             android:gravity="center"
             android:paddingBottom="@dimen/x10"
             android:paddingTop="@dimen/x10"
-            android:text="电话预约"
+            android:text="直接订房"
             android:textColor="#fff" />
     </LinearLayout>
 </LinearLayout>

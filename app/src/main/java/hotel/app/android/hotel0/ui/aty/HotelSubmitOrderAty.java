@@ -2,7 +2,6 @@ package hotel.app.android.hotel0.ui.aty;
 
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,6 +11,9 @@ import org.kymjs.kjframe.ui.BindView;
 import hotel.app.android.hotel0.R;
 import hotel.app.android.hotel0.ui.base.BaseActivity;
 
+/**
+ * 功能：酒店生成订单详情
+ */
 public class HotelSubmitOrderAty extends BaseActivity {
 
     @BindView(id = R.id.tv_title)
@@ -50,15 +52,7 @@ public class HotelSubmitOrderAty extends BaseActivity {
         ivToBack.setVisibility(View.VISIBLE);
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-         if (keyCode == 4){
-             toBackShowDialog();
-             return true;
-         }
-        return super.onKeyDown(keyCode, event);
 
-    }
 
     @Override
     public void widgetClick(View v) {
@@ -71,5 +65,10 @@ public class HotelSubmitOrderAty extends BaseActivity {
     }
     private void toBackShowDialog(){
         mShowBack.show();
+    }
+
+    @Override
+    public void onClickKeyToBack() {
+        toBackShowDialog();
     }
 }

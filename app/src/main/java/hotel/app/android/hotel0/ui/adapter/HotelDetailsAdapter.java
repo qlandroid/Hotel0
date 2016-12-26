@@ -13,6 +13,7 @@ import hotel.app.android.hotel0.R;
 import hotel.app.android.hotel0.inter.OnItemClickListener;
 
 /**
+ * 功能：酒店详情 中 酒店房间 列表的适配器；
  * Created by Administrator on 2016-12-12.
  */
 public class HotelDetailsAdapter extends RecyclerView.Adapter<HotelDetailsAdapter.HomeDetailsViewHolder> implements OnClickListener{
@@ -26,6 +27,10 @@ public class HotelDetailsAdapter extends RecyclerView.Adapter<HotelDetailsAdapte
         this.mListener = mListener;
     }
 
+    public void update(List mDataList){
+        this.mDataList = mDataList;
+        this.notifyDataSetChanged();
+    }
     @Override
     public HomeDetailsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_home_details_layout,parent,false);

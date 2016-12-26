@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -110,6 +111,21 @@ public abstract class BaseActivity  extends KJActivity {
             winParams.flags &= ~bits;
         }
         win.setAttributes(winParams);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == 4){
+            onClickKeyToBack();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    /**
+     * 当点击返回键
+     */
+    public void onClickKeyToBack(){
+
     }
 
 }

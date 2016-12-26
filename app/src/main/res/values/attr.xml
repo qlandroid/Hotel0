@@ -3,6 +3,10 @@
     <declare-styleable name="roundedimageview">
         <attr name="border_thickness" format="dimension" />
         <attr name="border_inside_color" format="color" />
-        <attr name="border_outside_color" format="color"></attr>
+        <attr name="border_outside_color" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="NameTextView">
+        <attr name="name" format="string"/>
+        <attr name="content" format="string"/>
     </declare-styleable>
 </resources>

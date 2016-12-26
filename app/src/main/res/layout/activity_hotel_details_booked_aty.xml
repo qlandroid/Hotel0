@@ -6,7 +6,7 @@
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
     android:layout_height="match_parent"
-    tools:context="hotel.app.android.hotel0.ui.aty.HotelDetailsBookedAty">
+    tools:context=".ui.aty.OrderedHotelDetailsAty">
     <include layout="@layout/include_title"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_bookedHotelList"

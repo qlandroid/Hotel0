@@ -14,7 +14,8 @@ import org.kymjs.kjframe.ui.KJFragment;
 import java.util.ArrayList;
 
 import hotel.app.android.hotel0.R;
-import hotel.app.android.hotel0.ui.aty.HotelDetailsBookedAty;
+import hotel.app.android.hotel0.ui.aty.OrderedFlatLongAty;
+import hotel.app.android.hotel0.ui.aty.OrderedHotelDetailsAty;
 import hotel.app.android.hotel0.ui.aty.UserDetailsAty;
 import hotel.app.android.hotel0.ui.view.DetailsListBtnListView;
 import hotel.app.android.hotel0.ui.view.RoundImageView;
@@ -160,14 +161,14 @@ public class DetailsFrag extends KJFragment implements DetailsListBtnListView.On
      * 功能：点击底部Item 跳转已定长租房
      */
     private void onClickItemOverLongFlat() {
-
+        startActivity(new Intent(getActivity(), OrderedFlatLongAty.class));
     }
 
     /**
      * 功能：点击底部Item 跳转已定酒店
      */
     private void onClickItemOverHotel() {
-        startActivity(new Intent(getActivity(), HotelDetailsBookedAty.class));
+        startActivity(new Intent(getActivity(), OrderedHotelDetailsAty.class));
     }
 
     /**

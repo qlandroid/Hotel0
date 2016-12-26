@@ -8,25 +8,57 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".ui.aty.HomeAty" />
-        <activity android:name=".ui.aty.LoginAty">
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.aty.HomeAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.aty.LoginAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.aty.RegisterAty" />
-        <activity android:name=".ui.aty.RetrieveAty" />
-        <activity android:name=".ui.aty.FlatLongDetailsAty" />
-        <activity android:name=".ui.aty.HotelDetailsAty" />
-        <activity android:name=".ui.aty.HotelSubmitOrderAty" />
-        <activity android:name=".ui.aty.LookHomeAty" />
-        <activity android:name=".ui.aty.HotelDetailsBookedAty" />
-        <activity android:name=".ui.aty.HotelCloseAty" />
-        <activity android:name=".ui.aty.UserDetailsAty" />
-        <activity android:name=".ui.aty.FlatSmallDetailsAty"></activity>
+        <activity
+            android:name=".ui.aty.RegisterAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.aty.RetrieveAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.aty.FlatLongDetailsAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.aty.HotelDetailsAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.aty.HotelSubmitOrderAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.aty.LookHomeAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.aty.OrderedHotelDetailsAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.aty.HotelCloseAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.aty.UserDetailsAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.aty.FlatSmallDetailsAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.aty.FlatLongSubmitOrderAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity android:name=".ui.aty.OrderedFlatLongAty" />
+        <activity android:name=".ui.aty.agreement.FlatLongAgreementAty" />
+        <activity android:name=".ui.aty.CalendarAty"></activity>
     </application>
 
 </manifest>

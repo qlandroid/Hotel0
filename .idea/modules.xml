@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CalendarLibrary/CalendarLibrary.iml" filepath="$PROJECT_DIR$/CalendarLibrary/CalendarLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hotel0.iml" filepath="$PROJECT_DIR$/Hotel0.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/pulltoRefresh/library/library.iml" filepath="$PROJECT_DIR$/pulltoRefresh/library/library.iml" />
