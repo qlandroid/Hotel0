@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="hotel.app.android.hotel0.ui.aty.OrderedHotelDetailsAty">
+
+    <include layout="@layout/include_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/layoutBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x130"
+                android:scaleType="fitXY"
+                android:src="@drawable/banner_icon_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/x6"
+                android:paddingLeft="@dimen/x10"
+                android:paddingTop="@dimen/x6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="酒店详情" />
+
+                <View
+                    style="@style/div_x"
+                    android:layout_marginBottom="@dimen/x6"
+                    android:layout_marginTop="@dimen/x6" />
+
+                <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:centrePadding="@dimen/x6"
+                    app:content="七天快捷酒店"
+                    app:name="酒店名称" />
+
+                <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x6"
+                    android:gravity="center"
+                    app:centrePadding="@dimen/x6"
+                    app:content="上海市浦东新区张杨路707号2501室"
+                    app:name="地址" />
+
+                <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/x6"
+                    android:layout_height="wrap_content"
+                    app:content="199元"
+                    app:name="单价" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/x6"
+                android:paddingLeft="@dimen/x10"
+                android:paddingTop="@dimen/x6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="日期" />
+
+                <View
+                    style="@style/div_x"
+                    android:layout_marginBottom="@dimen/x6"
+                    android:layout_marginTop="@dimen/x6" />
+
+                <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:centrePadding="@dimen/x6"
+                    app:content="2016-12-26"
+                    app:name="入住日期" />
+
+                <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x6"
+                    android:gravity="center"
+                    app:centrePadding="@dimen/x6"
+                    app:content="2016-12-28"
+                    app:name="离店日期" />
+
+                <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x6"
+                    app:centrePadding="@dimen/x6"
+                    app:content="2晚"
+                    app:name="入住天数" />
+
+                <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x6"
+                    app:centrePadding="@dimen/x6"
+                    app:content="398元"
+                    app:name="支付总价" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/x10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/x6"
+                android:paddingLeft="@dimen/x10"
+                android:paddingTop="@dimen/x6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="入住人信息" />
+
+                <View
+                    style="@style/div_x"
+                    android:layout_marginBottom="@dimen/x6"
+                    android:layout_marginTop="@dimen/x6" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_userList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

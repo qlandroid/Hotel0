@@ -7,6 +7,12 @@
     </declare-styleable>
     <declare-styleable name="NameTextView">
         <attr name="name" format="string"/>
-        <attr name="content" format="string"/>
+        <attr name="content" format="string|reference"/>
+        <attr name="nameSize" format="dimension"/>
+        <attr name="contentSize" format="dimension"/>
+        <attr name="nameColor"  format="color|reference"/>
+        <attr name="contentColor" format="color|reference"/>
+        <attr name="centrePadding" format="dimension"/>
+        <attr name="contentMaxLine" format="integer"/>
     </declare-styleable>
 </resources>

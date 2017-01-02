@@ -35,7 +35,12 @@ public class DetailsListBtnListView extends RecyclerView {
     }
 
     private void init(Context mContext){
-        this.setLayoutManager(new LinearLayoutManager(mContext));
+        this.setLayoutManager(new LinearLayoutManager(mContext){
+            @Override
+            public boolean canScrollVertically() {
+                return false;
+            }
+        });
     }
     public void setOnItemClickListener(Context context,List<BtnBean> list,OnItemClickListener listener){
         DetailsBtnAdapter adapter = new DetailsBtnAdapter(context, list, listener);
@@ -86,7 +91,8 @@ public class DetailsListBtnListView extends RecyclerView {
 
         @Override
         public DetailsBtnViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_details_btn,parent,false);
+            LayoutInflater li = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View itemView = li.inflate(R.layout.item_details_btn,parent,false);
             DetailsBtnViewHolder holder = new DetailsBtnViewHolder(itemView);
             return holder;
         }

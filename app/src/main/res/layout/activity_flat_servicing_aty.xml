@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/layoutBackground"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hotel.app.android.hotel0.ui.aty.FlatServicingAty">
+    <include layout="@layout/include_title"/>
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ntv_flatAddress"
+                app:content="上海浦东新区张杨路707号2501室"
+                app:name="地址"
+                app:centrePadding="@dimen/x6"
+                android:gravity="center_vertical"
+                android:background="#fff"
+                android:paddingRight="@dimen/x10"
+                android:paddingLeft="@dimen/x10"
+                android:paddingTop="@dimen/x6"
+                android:paddingBottom="@dimen/x6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ntv_userName"
+            app:name="申报人姓名"
+            android:background="#fff"
+            app:centrePadding="@dimen/x6"
+            app:content="张三"
+            android:paddingTop="@dimen/x6"
+            android:paddingBottom="@dimen/x6"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+            <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:name="联系电话"
+                android:id="@+id/ntv_userPhone"
+                android:background="#fff"
+                app:centrePadding="@dimen/x6"
+                app:content="17712345678"
+                android:paddingTop="@dimen/x6"
+                android:paddingBottom="@dimen/x6"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+
+                android:layout_marginTop="@dimen/x10"
+                android:background="#fff"
+                android:paddingTop="@dimen/x6"
+                android:paddingLeft="@dimen/x10"
+                android:paddingBottom="@dimen/x6"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginBottom="@dimen/x6"
+                    android:textColor="@color/textTitleColor"
+                    android:text="申请保修内容"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View style="@style/div_x"/>
+                <EditText
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textSize="12sp"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_marginTop="@dimen/x6"
+                    android:id="@+id/et_editContent"
+                    android:autoLink="all"
+                    android:paddingBottom="@dimen/x6"
+                    android:paddingTop="@dimen/x6"
+                    android:maxLength="300"
+                    android:gravity="start"
+                    android:background="@drawable/shape_text_background"
+                    android:hint="请编写保修内容最对300字"
+                    android:lines="5"
+                    android:maxLines="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/tv_submit"
+        android:clickable="true"
+        android:layout_marginBottom="@dimen/x6"
+        android:layout_marginRight="@dimen/x10"
+        android:layout_marginLeft="@dimen/x10"
+        android:textSize="18sp"
+        android:paddingBottom="@dimen/x6"
+        android:paddingTop="@dimen/x6"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:background="@color/red"
+        android:text="申请修复"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

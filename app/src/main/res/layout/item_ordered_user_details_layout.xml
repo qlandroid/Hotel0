@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="@dimen/x6"
+    android:paddingBottom="@dimen/x6"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ntv_userName"
+        app:name="姓名"
+        app:content="张三"
+        app:centrePadding="@dimen/x6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ntv_userNumber"
+        app:name="身份号"
+        android:layout_marginTop="@dimen/x6"
+        app:centrePadding="@dimen/x6"
+        app:content="230182************"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

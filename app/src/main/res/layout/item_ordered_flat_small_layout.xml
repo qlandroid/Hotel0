@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:paddingLeft="@dimen/x10"
+    android:paddingTop="@dimen/x6"
+    android:paddingBottom="@dimen/x6"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:name="订单号"
+            app:centrePadding="@dimen/x6"
+            app:content="201612151212022"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_flatType"
+            android:textColor="@color/red"
+            android:layout_gravity="right|center_vertical"
+            android:paddingRight="@dimen/x10"
+            android:paddingLeft="@dimen/x10"
+            android:text="待入住"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <View android:layout_marginTop="@dimen/x6"
+        android:layout_marginBottom="@dimen/x6" style="@style/div_x"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x90">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_flatIcon"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner_icon_1"
+            android:layout_width="@dimen/x90"
+            android:layout_height="@dimen/x70" />
+        <TextView
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_toRightOf="@+id/iv_flatIcon"
+            android:id="@+id/tv_name"
+            android:textSize="16sp"
+            android:textColor="@color/textTitleColor"
+            android:text="上海青年公寓"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_marginTop="@dimen/x6"
+            android:layout_below="@+id/tv_name"
+            android:layout_alignLeft="@+id/tv_name"
+            app:name="地址"
+            app:contentSize="12sp"
+            app:nameSize="12sp"
+            app:content="上海市浦东新区张杨路707号2501室"
+            android:id="@+id/ntv_flatAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:name="入住日期"
+            android:id="@+id/ntv_inFlatTime"
+            android:layout_marginTop="@dimen/x4"
+            android:layout_alignLeft="@+id/ntv_flatAddress"
+            android:layout_below="@+id/ntv_flatAddress"
+            app:contentSize="12sp"
+            app:nameSize="12sp"
+            app:content="2016年12月25日"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:name="离店日期"
+            android:layout_marginTop="@dimen/x4"
+            android:id="@+id/ntv_outFlatTime"
+            android:layout_alignLeft="@+id/ntv_inFlatTime"
+            android:layout_below="@+id/ntv_inFlatTime"
+            app:contentSize="12sp"
+            app:nameSize="12sp"
+            app:content="2016年12月25日"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_alignBottom="@+id/tv_payMoneyUnit"
+            android:layout_toLeftOf="@+id/tv_payMoneyUnit"
+            android:textSize="16sp"
+            android:textColor="@color/red"
+            android:text="199"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/tv_payMoneyUnit"
+            android:paddingLeft="@dimen/x6"
+            android:paddingRight="@dimen/x10"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/red"
+            android:text="元"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View style="@style/div_x"
+        android:layout_marginTop="@dimen/x6"
+        android:layout_marginBottom="@dimen/x6"/>
+    <LinearLayout
+        android:paddingRight="@dimen/x10"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_outFlat"
+            android:layout_marginRight="@dimen/x4"
+            android:clickable="true"
+            android:padding="@dimen/x6"
+            android:textColor="#fff"
+            android:background="@color/colorAccent"
+            android:text="确认退房"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_refund"
+            android:layout_marginRight="@dimen/x4"
+            android:clickable="true"
+            android:padding="@dimen/x6"
+            android:textColor="#fff"
+            android:background="@color/colorAccent"
+            android:text="退款协议"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_unlocking"
+            android:layout_marginRight="@dimen/x4"
+            android:clickable="true"
+            android:padding="@dimen/x6"
+            android:textColor="#fff"
+            android:background="@color/colorAccent"
+            android:text="开锁"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_flatAddUser"
+            android:layout_marginRight="@dimen/x4"
+            android:clickable="true"
+            android:padding="@dimen/x6"
+            android:textColor="#fff"
+            android:background="@color/colorAccent"
+            android:text="增加入住人"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_payMoney"
+            android:layout_marginRight="@dimen/x4"
+            android:clickable="true"
+            android:padding="@dimen/x6"
+            android:textColor="#fff"
+            android:background="@color/colorAccent"
+            android:text="续费付款"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

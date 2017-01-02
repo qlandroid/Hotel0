@@ -90,60 +90,39 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/x10"
                     android:layout_marginTop="@dimen/x10"
-                    android:text="啊手动阀手动阀手动阀手动阀手动阀手动阀啊手动阀手动阀手动阀手动阀手动阀阿斯顿 啊手动阀手动阀手动阀手动阀阿斯蒂芬阿斯顿发射点发生阿斯蒂芬阿斯蒂芬阿斯弗阿斯蒂芬啊手动阀士大夫阿三"
+                    android:text="房间朝阳，地理位置好，交通方便，附近有大型超市，可做饭，楼下就是菜市场"
                     android:textColor="@color/textTitleColor" />
 
                 <View style="@style/div_x" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal"
-                    android:paddingBottom="@dimen/x6"
-                    android:paddingTop="@dimen/x6">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="收起"
-                        android:textColor="#ff0000" />
-
-                    <ImageView
-                        android:layout_width="@dimen/x16"
-                        android:layout_height="@dimen/x16"
-                        android:src="@mipmap/drop_down_selected_icon" />
-                </LinearLayout>
-
             </LinearLayout>
         </LinearLayout>
-
     </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
-            android:clickable="true"
             android:id="@+id/tv_lookHome"
-            android:textSize="18sp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#ff0000"
+            android:clickable="true"
             android:gravity="center"
             android:paddingBottom="@dimen/x10"
             android:paddingTop="@dimen/x10"
             android:text="预约看房"
-            android:textColor="#fff" />
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
         <View
             android:layout_width="1dp"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
+
         <TextView
             android:id="@+id/tv_submitFlatOrder"
-            android:textSize="18sp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -152,6 +131,7 @@
             android:paddingBottom="@dimen/x10"
             android:paddingTop="@dimen/x10"
             android:text="直接订房"
-            android:textColor="#fff" />
+            android:textColor="#fff"
+            android:textSize="18sp" />
     </LinearLayout>
 </LinearLayout>

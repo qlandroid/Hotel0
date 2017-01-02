@@ -53,6 +53,7 @@ public class RoundImageView extends ImageView {
         mBorderThickness = a.getDimensionPixelSize(R.styleable.roundedimageview_border_thickness, 0);
         mBorderOutsideColor = a.getColor(R.styleable.roundedimageview_border_outside_color,defaultColor);
         mBorderInsideColor = a.getColor(R.styleable.roundedimageview_border_inside_color, defaultColor);
+        a.recycle();
     }
 
     @Override

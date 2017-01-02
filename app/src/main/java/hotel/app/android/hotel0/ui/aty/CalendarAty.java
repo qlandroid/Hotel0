@@ -22,10 +22,11 @@ public class CalendarAty extends BaseActivity {
 
     @BindView(id = R.id.tv_title)
     TextView tvTitle;
-    @BindView(id = R.id.iv_toBack,click = true)
+    @BindView(id = R.id.iv_toBack, click = true)
     ImageView ivToBack;
     @BindView(id = R.id.cv_calendar)
     CalendarView cvCalendar;
+
     @Override
     public void setRootView() {
         setContentView(R.layout.activity_calendar_aty);
@@ -45,11 +46,11 @@ public class CalendarAty extends BaseActivity {
             @Override
             public void onSuccess(ClickBean inBean, ClickBean outBean, int amountDay) {
                 Intent intent = new Intent();
-                intent.putExtra(C.Aty.HotelInTime,inBean);
-                intent.putExtra(C.Aty.HotelOutTime,outBean);
-                intent.putExtra(C.Aty.HotelAmountDay,amountDay);
+                intent.putExtra(C.Aty.HotelInTime, inBean);
+                intent.putExtra(C.Aty.HotelOutTime, outBean);
+                intent.putExtra(C.Aty.HotelAmountDay, amountDay);
 
-                setResult(Activity.RESULT_OK,intent);
+                setResult(Activity.RESULT_OK, intent);
                 finish();
             }
         });

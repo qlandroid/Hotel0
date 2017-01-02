@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import hotel.app.android.hotel0.R;
-import hotel.app.android.hotel0.bean.HotelDetailsBookedBean;
+import hotel.app.android.hotel0.bean.OrderedHotelBean;
 
 /**
  * 功能：已经预订酒店列表的适配器
@@ -18,10 +18,10 @@ import hotel.app.android.hotel0.bean.HotelDetailsBookedBean;
  */
 public class OrderedHotelDetailsAdapter extends RecyclerView.Adapter<OrderedHotelDetailsAdapter.HotelBookedDetailsViewHolder> implements View.OnClickListener {
     private Context mContext;
-    private List<HotelDetailsBookedBean> mDataList;
+    private List<OrderedHotelBean> mDataList;
     private OnHotelBookedCloseClickListener mListener;
 
-    public OrderedHotelDetailsAdapter(Context mContext, List<HotelDetailsBookedBean> mDataList, OnHotelBookedCloseClickListener mListener) {
+    public OrderedHotelDetailsAdapter(Context mContext, List<OrderedHotelBean> mDataList, OnHotelBookedCloseClickListener mListener) {
         this.mContext = mContext;
         this.mDataList = mDataList;
         this.mListener = mListener;
@@ -62,9 +62,9 @@ public class OrderedHotelDetailsAdapter extends RecyclerView.Adapter<OrderedHote
     }
 
     public interface OnHotelBookedCloseClickListener {
-        void onClickClose(int position, HotelDetailsBookedBean bean);
+        void onClickClose(int position, OrderedHotelBean bean);
 
-        void onClickItem(View v, int position, HotelDetailsBookedBean bean);
+        void onClickItem(View v, int position, OrderedHotelBean bean);
     }
 
     class HotelBookedDetailsViewHolder extends RecyclerView.ViewHolder {

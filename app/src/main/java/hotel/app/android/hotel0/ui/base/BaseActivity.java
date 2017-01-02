@@ -1,6 +1,7 @@
 package hotel.app.android.hotel0.ui.base;
 
 import android.annotation.TargetApi;
+import android.app.Fragment;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,6 +26,8 @@ import hotel.app.android.hotel0.R;
 public abstract class BaseActivity  extends KJActivity {
     private BaseActivity activity;
     public SystemBarTintManager tintManager;
+
+
     /*********************************************************************/
     /*********************************************************************/
     /********************用于隐藏软键盘**********************************/
@@ -125,6 +128,11 @@ public abstract class BaseActivity  extends KJActivity {
      * 当点击返回键
      */
     public void onClickKeyToBack(){
+
+    }
+    /***********************************************************************/
+
+    public void myChangeFragment(int resView,Fragment fragment){
 
     }
 

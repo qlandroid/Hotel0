@@ -1,5 +1,6 @@
 package hotel.app.android.hotel0.ui.aty;
 
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -8,16 +9,19 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.kymjs.kjframe.ui.BindView;
+import org.kymjs.kjframe.ui.ViewInject;
 
 import hotel.app.android.hotel0.R;
 import hotel.app.android.hotel0.ui.adapter.OrderedFlatLongAdapter;
+import hotel.app.android.hotel0.ui.adapter.OrderedFlatLongAdapter.OnFlatLongButtonListener;
 import hotel.app.android.hotel0.ui.base.BaseActivity;
 import hotel.app.android.hotel0.utils.DividerItemDecoration;
 
 /**
  * 功能：已经预订的长租公寓
  */
-public class OrderedFlatLongAty extends BaseActivity {
+public class OrderedFlatLongAty extends BaseActivity implements OnFlatLongButtonListener{
+    public static final int REQUEST_RENEW_PAY_MONEY = 0X123;
 
     @BindView(id = R.id.tv_title)
     TextView tvTitle;
@@ -38,6 +42,7 @@ public class OrderedFlatLongAty extends BaseActivity {
         ivToBack.setVisibility(View.VISIBLE);
         rvOrderedFlatLongList.setLayoutManager(new LinearLayoutManager(this));
         mOrderedAdapter = new OrderedFlatLongAdapter(this);
+        mOrderedAdapter.setOnFlatLongButtonListener(this);
         rvOrderedFlatLongList.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL));
         rvOrderedFlatLongList.setAdapter(mOrderedAdapter);
     }
@@ -63,4 +68,32 @@ public class OrderedFlatLongAty extends BaseActivity {
         super.onClickKeyToBack();
         onClickToBack();
     }
+
+    /*****************************************************************************************/
+    /*****************************************************************************************/
+    /******************************* 每条信息上的button的点击事件 ****************************/
+    @Override
+    public void onItemClickServicing(int position) {
+        ViewInject.toast(String.valueOf(position));
+        startActivity(new Intent(this,FlatServicingAty.class));
+    }
+
+    @Override
+    public void onItemClickPayMoney(int position) {
+        ViewInject.toast("点击续约付款");
+        Intent intent = new Intent(this,FlatLongRenewPayMoneyAty.class);
+        startActivityForResult(intent,REQUEST_RENEW_PAY_MONEY);
+    }
+
+    @Override
+    public void onItemClickAgreement(int position) {
+        ViewInject.toast("点击合同确认");
+    }
+
+    @Override
+    public void onItemClickQuitFlat(int position) {
+        ViewInject.toast("点击申请退租");
+    }
+    /**************************** item中的点击事件结束 ***************************************/
+    /*****************************************************************************************/
 }

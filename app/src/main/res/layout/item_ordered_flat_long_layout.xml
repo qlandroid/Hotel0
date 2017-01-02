@@ -127,6 +127,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <TextView
+            android:onClick="true"
+            android:id="@+id/tv_payMoney"
             android:layout_marginRight="@dimen/x4"
             android:clickable="true"
             android:padding="@dimen/x6"
@@ -136,6 +138,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            android:id="@+id/tv_flatAgreement"
             android:layout_marginRight="@dimen/x4"
             android:clickable="true"
             android:padding="@dimen/x6"
@@ -145,6 +148,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            android:id="@+id/tv_flatServicing"
             android:layout_marginRight="@dimen/x4"
             android:clickable="true"
             android:padding="@dimen/x6"
@@ -154,6 +158,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            android:id="@+id/tv_flatQuit"
             android:clickable="true"
             android:padding="@dimen/x6"
             android:textColor="#fff"

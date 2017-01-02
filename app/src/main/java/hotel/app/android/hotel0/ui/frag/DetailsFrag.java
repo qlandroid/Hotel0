@@ -15,7 +15,8 @@ import java.util.ArrayList;
 
 import hotel.app.android.hotel0.R;
 import hotel.app.android.hotel0.ui.aty.OrderedFlatLongAty;
-import hotel.app.android.hotel0.ui.aty.OrderedHotelDetailsAty;
+import hotel.app.android.hotel0.ui.aty.OrderedFlatSmallAty;
+import hotel.app.android.hotel0.ui.aty.OrderedHotelAty;
 import hotel.app.android.hotel0.ui.aty.UserDetailsAty;
 import hotel.app.android.hotel0.ui.view.DetailsListBtnListView;
 import hotel.app.android.hotel0.ui.view.RoundImageView;
@@ -65,13 +66,13 @@ public class DetailsFrag extends KJFragment implements DetailsListBtnListView.On
 
         tvTitle.setText("个人详情");
         mBtnlist = new ArrayList<>();
-        addBottomBtn("会员管理",R.drawable.user_icon, CLICK_TYPE_VIP_MANAGER);
-        addBottomBtn("已预约看房",R.drawable.user_icon,CLICK_TYPE_FLAT_LOOK);
-        addBottomBtn("已订酒店",R.drawable.user_icon,CLICK_TYPE_OVER_HOTEL);
-        addBottomBtn("已订短租房",R.drawable.user_icon,CLICK_TYPE_OVER_SMALL_FLAT);
-        addBottomBtn("已定长租房",R.drawable.user_icon,CLICK_TYPE_OVER_LONG_FLAT);
-        addBottomBtn("公寓服务",R.drawable.user_icon,CLICK_TYPE_FLAT_SERVICE);
-        addBottomBtn("消费记录",R.drawable.user_icon,CLICK_TYPE_PAY_NOTE);
+        addBottomBtn("会员管理",R.drawable.icon_vip_edit, CLICK_TYPE_VIP_MANAGER);
+        addBottomBtn("已预约看房",R.drawable.icon_ordered,CLICK_TYPE_FLAT_LOOK);
+        addBottomBtn("已订酒店",R.drawable.icon_ordered,CLICK_TYPE_OVER_HOTEL);
+        addBottomBtn("已订短租房",R.drawable.icon_ordered,CLICK_TYPE_OVER_SMALL_FLAT);
+        addBottomBtn("已定长租房",R.drawable.icon_ordered,CLICK_TYPE_OVER_LONG_FLAT);
+        addBottomBtn("公寓服务",R.drawable.icon_flat_service,CLICK_TYPE_FLAT_SERVICE);
+        addBottomBtn("消费记录",R.drawable.icon_pay_note,CLICK_TYPE_PAY_NOTE);
         rvBtn.addItemDecoration(new DividerItemDecoration(getActivity(), LinearLayout.VERTICAL));
         rvBtn.setOnItemClickListener(getActivity(), mBtnlist,this);
     }
@@ -154,7 +155,7 @@ public class DetailsFrag extends KJFragment implements DetailsListBtnListView.On
      * 功能：点击底部Item 跳转已定短租
      */
     private void onClickItemOverSmallFlat() {
-
+        startActivity(new Intent(getActivity(), OrderedFlatSmallAty.class));
     }
 
     /**
@@ -168,7 +169,7 @@ public class DetailsFrag extends KJFragment implements DetailsListBtnListView.On
      * 功能：点击底部Item 跳转已定酒店
      */
     private void onClickItemOverHotel() {
-        startActivity(new Intent(getActivity(), OrderedHotelDetailsAty.class));
+        startActivity(new Intent(getActivity(), OrderedHotelAty.class));
     }
 
     /**

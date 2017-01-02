@@ -3,63 +3,87 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <include layout="@layout/include_title"/>
-    <FrameLayout
-        android:background="@drawable/details_top_background"
+    <ScrollView
+        android:background="@color/layoutBackground"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x150">
+        android:layout_weight="1"
+        android:layout_height="0dp">
         <LinearLayout
-            android:layout_gravity="center"
+
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <hotel.app.android.hotel0.ui.view.RoundImageView
-                android:id="@+id/riv_userIcon"
-                android:layout_gravity="center"
-                android:scaleType="fitXY"
-                android:layout_width="@dimen/x70"
-                android:layout_height="@dimen/x70"
-                android:src="@drawable/user_icon"/>
-            <TextView
-                android:id="@+id/tv_userName"
-                android:layout_gravity="center"
-                android:textColor="#cccccc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="未登录"/>
+            <FrameLayout
+                android:background="@drawable/details_top_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x150">
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <hotel.app.android.hotel0.ui.view.RoundImageView
+                        android:id="@+id/riv_userIcon"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"
+                        android:layout_width="@dimen/x70"
+                        android:layout_height="@dimen/x70"
+                        android:src="@drawable/user_icon"/>
+                    <TextView
+                        android:id="@+id/tv_userName"
+                        android:layout_gravity="center"
+                        android:textColor="#cccccc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未登录"/>
+                </LinearLayout>
+
+            </FrameLayout>
+            <LinearLayout
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_details_left"
+                    android:clickable="true"
+                    android:paddingTop="@dimen/x10"
+                    android:paddingBottom="@dimen/x10"
+                    android:gravity="center"
+                    android:text="预约申请"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <View  style="@style/div_y"/>
+                <TextView
+                    android:id="@+id/tv_details_right"
+                    android:clickable="true"
+                    android:paddingTop="@dimen/x10"
+                    android:paddingBottom="@dimen/x10"
+                    android:gravity="center"
+                    android:text="在线缴费记录"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View style="@style/div_x"/>
+            <FrameLayout
+                android:layout_marginTop="@dimen/x10"
+                android:paddingLeft="@dimen/x10"
+                android:background="#fff"
+                android:layout_marginBottom="@dimen/x20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <hotel.app.android.hotel0.ui.view.DetailsListBtnListView
+                    android:overScrollMode="never"
+                    android:id="@+id/rv_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+
         </LinearLayout>
 
-    </FrameLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/tv_details_left"
-            android:clickable="true"
-            android:paddingTop="@dimen/x6"
-            android:paddingBottom="@dimen/x6"
-            android:gravity="center"
-            android:text="预约申请"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
-        <View  style="@style/div_y"/>
-        <TextView
-            android:id="@+id/tv_details_right"
-            android:clickable="true"
-            android:paddingTop="@dimen/x6"
-            android:paddingBottom="@dimen/x6"
-            android:gravity="center"
-            android:text="在线缴费记录"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-    <hotel.app.android.hotel0.ui.view.DetailsListBtnListView
-        android:overScrollMode="never"
-        android:layout_marginTop="@dimen/x6"
-        android:id="@+id/rv_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    </ScrollView>
+
 
 </LinearLayout>

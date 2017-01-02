@@ -10,6 +10,7 @@ import android.widget.TextView;
 import org.kymjs.kjframe.ui.BindView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import hotel.app.android.hotel0.R;
 import hotel.app.android.hotel0.bean.OrderedUserDetailsBean;
@@ -18,9 +19,9 @@ import hotel.app.android.hotel0.ui.base.BaseActivity;
 import hotel.app.android.hotel0.utils.DividerItemDecoration;
 
 /**
- * 功能：已订酒店的详细信息页面
+ * 功能：已订短租房详细信息，提供入住人信息，入住详情；
  */
-public class OrderedHotelDetailsAty extends BaseActivity {
+public class OrderedFlatSmallDetailsAty extends BaseActivity {
 
     @BindView(id = R.id.tv_title)
     TextView tvTitle;
@@ -29,11 +30,11 @@ public class OrderedHotelDetailsAty extends BaseActivity {
     @BindView(id = R.id.rv_userList)
     RecyclerView rvUserList;
     private OrderedFlatSmallDetailsUserAdapter mOrderedUserDetailsAdapter;
-    private ArrayList<OrderedUserDetailsBean> mUserDetailsList;
+    private List<OrderedUserDetailsBean> mUserDetailsList;
 
     @Override
     public void setRootView() {
-        setContentView(R.layout.activity_ordered_hotel_details_aty);
+        setContentView(R.layout.activity_ordered_flat_small_details_aty);
     }
 
     @Override
@@ -48,17 +49,15 @@ public class OrderedHotelDetailsAty extends BaseActivity {
         }
     }
 
-
     @Override
     public void initWidget() {
         super.initWidget();
-        tvTitle.setText("已订酒店详情");
         tvTitle.setFocusable(true);
         tvTitle.setFocusableInTouchMode(true);
         tvTitle.requestFocus();
-
+        tvTitle.setText("入住详情");
         ivToBack.setVisibility(View.VISIBLE);
-        rvUserList.setLayoutManager(new LinearLayoutManager(this) {
+        rvUserList.setLayoutManager(new LinearLayoutManager(this){
             @Override
             public boolean canScrollVertically() {
                 return false;
@@ -80,6 +79,6 @@ public class OrderedHotelDetailsAty extends BaseActivity {
     }
 
     private void onClickToBack() {
-
+        finish();
     }
 }
