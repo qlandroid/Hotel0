@@ -6,7 +6,7 @@
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="hotel.app.android.hotel0.ui.aty.RetrieveAty">
+    tools:context="cn.yizhupingtai.android.hotel.ui.aty.RetrieveAty">
 
     <include layout="@layout/include_title" />
 

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="hotel.app.android.hotel0.ui.aty.agreement.FlatLongAgreementAty">
+    tools:context="cn.yizhupingtai.android.hotel.ui.aty.agreement.FlatLongAgreementAty">
 
     <include layout="@layout/include_title" />
 
@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-           <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+           <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                app:name= "你好"
                app:content="很不好"
                android:layout_width="wrap_content"

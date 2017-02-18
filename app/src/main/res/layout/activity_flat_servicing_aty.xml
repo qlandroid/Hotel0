@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="hotel.app.android.hotel0.ui.aty.FlatServicingAty">
+    tools:context="cn.yizhupingtai.android.hotel.ui.aty.FlatServicingAty">
     <include layout="@layout/include_title"/>
     <ScrollView
         android:layout_weight="1"
@@ -17,7 +17,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+            <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/ntv_flatAddress"
                 app:content="上海浦东新区张杨路707号2501室"
                 app:name="地址"
@@ -30,7 +30,7 @@
                 android:paddingBottom="@dimen/x6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+            <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/ntv_userName"
             app:name="申报人姓名"
             android:background="#fff"
@@ -42,7 +42,7 @@
             android:paddingRight="@dimen/x10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-            <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+            <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                 app:name="联系电话"
                 android:id="@+id/ntv_userPhone"
                 android:background="#fff"

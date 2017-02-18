@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="hotel.app.android.hotel0">
+    package="cn.yizhupingtai.android.hotel">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -31,7 +31,7 @@
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
     <application
-        android:name=".MyApp"
+        android:name="cn.yizhupingtai.android.hotel.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/app_icon"
         android:label="@string/app_name"
@@ -49,10 +49,10 @@
             android:process=":remote" />
         <!-- 百度地图结束 -->
         <activity
-            android:name=".MainActivity"
+            android:name="cn.yizhupingtai.android.hotel.MainActivity"
             android:windowSoftInputMode="stateHidden|stateUnchanged"></activity>
         <activity
-            android:name=".ui.aty.HomeAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.HomeAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -61,69 +61,69 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.aty.LoginAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.LoginAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged" />
         <activity
-            android:name=".ui.aty.RegisterAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.RegisterAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.RetrieveAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.RetrieveAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.FlatLongDetailsAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.FlatLongDetailsAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.HotelDetailsAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.HotelDetailsAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.HotelSubmitOrderAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.HotelSubmitOrderAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.LookHomeAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.LookHomeAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.OrderedHotelAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.OrderedHotelAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.HotelCloseAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.HotelCloseAty"
             android:windowSoftInputMode="stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.UserDetailsAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.UserDetailsAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged" />
         <activity
-            android:name=".ui.aty.FlatSmallDetailsAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.FlatSmallDetailsAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.FlatLongSubmitOrderAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.FlatLongSubmitOrderAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.OrderedFlatLongAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.OrderedFlatLongAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.agreement.FlatLongAgreementAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.agreement.FlatLongAgreementAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.CalendarAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.CalendarAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.FlatServicingAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.FlatServicingAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.FlatLongRenewPayMoneyAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.FlatLongRenewPayMoneyAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.OrderedFlatSmallAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.OrderedFlatSmallAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.aty.OrderedFlatSmallDetailsAty"
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.OrderedFlatSmallDetailsAty"
             android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan" />
-        <activity android:name=".ui.aty.OrderedHotelDetailsAty" />
-        <activity android:name=".ui.aty.FlatServiceAty" />
-        <activity android:name=".ui.aty.OrderedFlatLongDetailsAty" />
-        <activity android:name=".ui.aty.FlatAddUserAty" />
-        <activity android:name=".ui.aty.FlatLongApplyOutAty" />
-        <activity android:name=".ui.aty.PayRecordAty" />
-        <activity android:name=".ui.aty.BespeakLookFlatAty"></activity>
+        <activity android:name="cn.yizhupingtai.android.hotel.ui.aty.OrderedHotelDetailsAty" />
+        <activity android:name="cn.yizhupingtai.android.hotel.ui.aty.FlatServiceAty" />
+        <activity android:name="cn.yizhupingtai.android.hotel.ui.aty.OrderedFlatLongDetailsAty" />
+        <activity android:name="cn.yizhupingtai.android.hotel.ui.aty.FlatAddUserAty" />
+        <activity android:name="cn.yizhupingtai.android.hotel.ui.aty.FlatLongApplyOutAty" />
+        <activity android:name="cn.yizhupingtai.android.hotel.ui.aty.PayRecordAty" />
+        <activity android:name="cn.yizhupingtai.android.hotel.ui.aty.BespeakLookFlatAty"></activity>
     </application>
 
 </manifest>

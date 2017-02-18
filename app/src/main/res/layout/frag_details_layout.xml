@@ -22,7 +22,7 @@
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <hotel.app.android.hotel0.ui.view.RoundImageView
+                    <cn.yizhupingtai.android.hotel.ui.view.RoundImageView
                         android:id="@+id/riv_userIcon"
                         android:layout_gravity="center"
                         android:scaleType="fitXY"
@@ -75,7 +75,7 @@
                 android:layout_marginBottom="@dimen/x20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <hotel.app.android.hotel0.ui.view.DetailsListBtnListView
+                <cn.yizhupingtai.android.hotel.ui.view.DetailsListBtnListView
                     android:overScrollMode="never"
                     android:id="@+id/rv_btn"
                     android:layout_width="match_parent"

@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     android:background="@color/layoutBackground"
-    tools:context="hotel.app.android.hotel0.ui.aty.FlatAddUserAty">
+    tools:context="cn.yizhupingtai.android.hotel.ui.aty.FlatAddUserAty">
     <include layout="@layout/include_title"/>
     <LinearLayout
         android:background="#fff"

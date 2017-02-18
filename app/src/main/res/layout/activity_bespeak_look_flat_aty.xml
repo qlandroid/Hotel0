@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="hotel.app.android.hotel0.ui.aty.BespeakLookFlatAty">
+    tools:context="cn.yizhupingtai.android.hotel.ui.aty.BespeakLookFlatAty">
 
     <include layout="@layout/include_title"/>
 

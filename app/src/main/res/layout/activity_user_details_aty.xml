@@ -7,7 +7,7 @@
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="hotel.app.android.hotel0.ui.aty.UserDetailsAty">
+    tools:context="cn.yizhupingtai.android.hotel.ui.aty.UserDetailsAty">
 
     <include layout="@layout/include_title" />
 
@@ -27,7 +27,7 @@
                 android:layout_marginTop="@dimen/x6"
                 android:background="#fff">
 
-                <hotel.app.android.hotel0.ui.view.RoundImageView
+                <cn.yizhupingtai.android.hotel.ui.view.RoundImageView
                     android:layout_width="@dimen/x60"
                     android:layout_height="@dimen/x60"
                     android:layout_gravity="center"

@@ -7,7 +7,7 @@
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="hotel.app.android.hotel0.ui.aty.FlatLongRenewPayMoneyAty">
+    tools:context="cn.yizhupingtai.android.hotel.ui.aty.FlatLongRenewPayMoneyAty">
 
     <include layout="@layout/include_title" />
 
@@ -40,7 +40,7 @@
                     android:src="@drawable/banner_icon_2" />
 
 
-                    <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:layout_marginLeft="@dimen/x10"
                         android:id="@+id/ntv_flatName"
                         android:layout_toRightOf="@+id/iv_flatIcon"
@@ -52,7 +52,7 @@
                         app:name="名称"
                         app:nameSize="16sp" />
 
-                    <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/ntv_flatAddress"
                         android:layout_below="@+id/ntv_flatName"
                         android:layout_alignLeft="@+id/ntv_flatName"
@@ -96,7 +96,7 @@
                     android:layout_marginBottom="@dimen/x6"
                     android:layout_marginTop="@dimen/x6" />
 
-                <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/x4"
@@ -106,7 +106,7 @@
                     app:name="付费方式"
                     app:nameSize="12sp" />
 
-                <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/x4"
@@ -116,7 +116,7 @@
                     app:name="入住日期"
                     app:nameSize="12sp" />
 
-                <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/x4"
@@ -127,7 +127,7 @@
                     app:nameSize="12sp" />
             </LinearLayout>
 
-            <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+            <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:padding="@dimen/x6"
                 android:paddingBottom="@dimen/x10"
@@ -161,7 +161,7 @@
                     android:layout_marginBottom="@dimen/x6"
                     android:layout_marginTop="@dimen/x6" />
 
-                <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/x4"
@@ -171,7 +171,7 @@
                     app:name="姓名"
                     app:nameSize="12sp" />
 
-                <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/x4"
@@ -181,7 +181,7 @@
                     app:name="联系电话"
                     app:nameSize="12sp" />
 
-                <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/x4"

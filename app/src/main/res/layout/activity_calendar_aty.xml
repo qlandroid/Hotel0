@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
-    tools:context="hotel.app.android.hotel0.ui.aty.CalendarAty">
+    tools:context="cn.yizhupingtai.android.hotel.ui.aty.CalendarAty">
     <include layout="@layout/include_title"/>
-    <hotel.app.android.mylibrary.view.CalendarView
+    <cn.yizhupingtai.android.mylibrary.view.CalendarView
         android:id="@+id/cv_calendar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

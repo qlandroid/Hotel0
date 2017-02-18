@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+        <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_gravity="center_vertical"
             app:name="订单号"
             app:centrePadding="@dimen/x6"
@@ -27,28 +27,28 @@
     </FrameLayout>
     <View style="@style/div_x" android:layout_marginTop="@dimen/x6"
         android:layout_marginBottom="@dimen/x6"/>
-    <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+    <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
         app:name="公寓名称"
         app:content="上海青年公寓"
         app:centrePadding="@dimen/x6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+    <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
         app:name="地址"
         android:layout_marginTop="@dimen/x6"
         app:centrePadding="@dimen/x6"
         app:content="上海市某个区某个地方2015室"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-    <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+    <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
         app:name="申请时间"
         android:layout_marginTop="@dimen/x6"
         app:centrePadding="@dimen/x6"
         app:content="2016-12-12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-    <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+    <cn.yizhupingtai.android.hotel.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
         app:name="维修内容"
         app:contentMaxLine="2"
         android:layout_marginTop="@dimen/x6"

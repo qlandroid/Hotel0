@@ -6,7 +6,7 @@
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="hotel.app.android.hotel0.ui.aty.HotelDetailsAty">
+    tools:context="cn.yizhupingtai.android.hotel.ui.aty.HotelDetailsAty">
     <View
         android:id="@+id/showView"
         android:layout_width="0dp"

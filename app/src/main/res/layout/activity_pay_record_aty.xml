@@ -6,7 +6,7 @@
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="hotel.app.android.hotel0.ui.aty.PayRecordAty">
+    tools:context="cn.yizhupingtai.android.hotel.ui.aty.PayRecordAty">
     <include layout="@layout/include_title"/>
     <ListView
         android:id="@+id/lv_payRecordList"

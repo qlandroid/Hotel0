@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "hotel.app.android.hotel0"
+        applicationId "cn.yizhupingtai.android.hotel"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
@@ -33,7 +33,6 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.5.2'
     compile 'com.youth.banner:banner:1.4.4'
     compile 'com.android.support:support-v4:23.2.1'
-    compile 'com.android.support:design:23.2.1'
     //设置系统actionBar
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
     //仿美团下拉筛选
@@ -41,4 +40,5 @@ dependencies {
     compile project(':pulltoRefresh:library')
     compile project(':CalendarLibrary')
     compile files('libs/BaiduLBS_Android.jar')
+    compile 'com.android.support:design:23.2.1'
 }

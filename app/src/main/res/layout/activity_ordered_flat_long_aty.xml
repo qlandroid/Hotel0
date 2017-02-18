@@ -6,7 +6,7 @@
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="hotel.app.android.hotel0.ui.aty.OrderedFlatLongAty">
+    tools:context="cn.yizhupingtai.android.hotel.ui.aty.OrderedFlatLongAty">
     <include layout="@layout/include_title"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_orderedFlatLongList"

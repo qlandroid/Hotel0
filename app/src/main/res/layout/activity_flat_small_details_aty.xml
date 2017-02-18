@@ -39,7 +39,7 @@
                 android:paddingRight="@dimen/x10"
                 android:paddingTop="@dimen/x10">
 
-                <hotel.app.android.hotel0.ui.view.HomeTitleTextView
+                <cn.yizhupingtai.android.hotel.ui.view.HomeTitleTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="浦东新区"
@@ -55,7 +55,7 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
-            <hotel.app.android.hotel0.ui.view.HomeDetailsView
+            <cn.yizhupingtai.android.hotel.ui.view.HomeDetailsView
                 android:id="@+id/hdv_detailsItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

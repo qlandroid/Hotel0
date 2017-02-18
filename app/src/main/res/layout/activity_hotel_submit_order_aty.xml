@@ -7,7 +7,7 @@
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="hotel.app.android.hotel0.ui.aty.HotelSubmitOrderAty">
+    tools:context="cn.yizhupingtai.android.hotel.ui.aty.HotelSubmitOrderAty">
 
     <include layout="@layout/include_title" />
 

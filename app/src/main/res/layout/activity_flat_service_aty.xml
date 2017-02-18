@@ -6,7 +6,7 @@
     android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="hotel.app.android.hotel0.ui.aty.FlatServiceAty">
+    tools:context="cn.yizhupingtai.android.hotel.ui.aty.FlatServiceAty">
 
     <include layout="@layout/include_title" />
 

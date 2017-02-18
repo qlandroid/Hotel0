@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="hotel.app.android.hotel0.MainActivity">
+    tools:context="cn.yizhupingtai.android.hotel.MainActivity">
     <Button
         android:text="搜索"
         android:id="@+id/btn_click"
