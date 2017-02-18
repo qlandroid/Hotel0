@@ -13,4 +13,5 @@ public class MyApp extends Application {
         super.onCreate();
         SDKInitializer.initialize(getApplicationContext());
     }
+
 }

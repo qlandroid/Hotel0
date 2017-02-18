@@ -71,7 +71,12 @@ public class OrderedFlatLongAty extends BaseActivity implements OnFlatLongButton
 
     /*****************************************************************************************/
     /*****************************************************************************************/
-    /******************************* 每条信息上的button的点击事件 ****************************/
+    /******************************* 每条item上的button的点击事件 ****************************/
+    @Override
+    public void onItemClick(int position) {
+        startActivity(new Intent(this,OrderedFlatLongDetailsAty.class));
+    }
+
     @Override
     public void onItemClickServicing(int position) {
         ViewInject.toast(String.valueOf(position));
@@ -92,6 +97,7 @@ public class OrderedFlatLongAty extends BaseActivity implements OnFlatLongButton
 
     @Override
     public void onItemClickQuitFlat(int position) {
+        startActivity(new Intent(this,FlatLongApplyOutAty.class));
         ViewInject.toast("点击申请退租");
     }
     /**************************** item中的点击事件结束 ***************************************/

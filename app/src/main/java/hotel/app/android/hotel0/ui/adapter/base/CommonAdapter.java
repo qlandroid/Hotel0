@@ -1,7 +1,5 @@
 package hotel.app.android.hotel0.ui.adapter.base;
 
-import java.util.List;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.SparseArray;
@@ -10,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.List;
 
 /**
  * 万能适配器
@@ -26,6 +26,10 @@ public abstract class CommonAdapter<E> extends BaseAdapter {
 		this.mContext = context;
 		this.data = data;
 		this.layoutId = layoutId;
+	}
+	public void update(List<E> data){
+		this.data = data;
+		this.notifyDataSetChanged();
 	}
 
 	@Override
@@ -100,7 +104,6 @@ public abstract class CommonAdapter<E> extends BaseAdapter {
 		
 		/**
 		 * 为Item中的TextView设置数据
-		 * @param resId
 		 * @param text
 		 */
 		public ViewHolder setText(int viewId, CharSequence text) {
@@ -110,8 +113,6 @@ public abstract class CommonAdapter<E> extends BaseAdapter {
 		
 		/**
 		 * 为Item中的ImageView设置数据
-		 * @param resId
-		 * @param img
 		 */
 		public ViewHolder setImageResource(int viewId, int imgId) {
 			((ImageView)getViewById(viewId)).setImageResource(imgId);
@@ -120,8 +121,6 @@ public abstract class CommonAdapter<E> extends BaseAdapter {
 		
 		/**
 		 * 为Item中的ImageView设置数据
-		 * @param resId
-		 * @param img
 		 */
 		public ViewHolder setImageBitmap(int viewId, Bitmap bm) {
 			((ImageView)getViewById(viewId)).setImageBitmap(bm);

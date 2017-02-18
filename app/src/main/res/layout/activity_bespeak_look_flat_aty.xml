@@ -2,16 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:clipToPadding="true"
-    android:fitsSystemWindows="true"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="hotel.app.android.hotel0.ui.aty.FlatServiceAty">
+    android:layout_height="match_parent"
+    tools:context="hotel.app.android.hotel0.ui.aty.BespeakLookFlatAty">
 
-    <include layout="@layout/include_title" />
+    <include layout="@layout/include_title"/>
 
     <com.handmark.pulltorefresh.library.PullToRefreshListView
-        android:id="@+id/pullToListService"
+        android:id="@+id/pullToListLookFlatList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

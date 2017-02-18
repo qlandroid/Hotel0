@@ -12,7 +12,7 @@ import hotel.app.android.hotel0.ui.base.BaseActivity;
 import hotel.app.android.hotel0.ui.view.NameTextView;
 
 /**
- * 功能： 公寓中申请维修页面
+ * 功能： 公寓提交申请维修页面
  */
 public class FlatServicingAty extends BaseActivity {
 

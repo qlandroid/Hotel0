@@ -14,9 +14,11 @@ import org.kymjs.kjframe.ui.KJFragment;
 import java.util.ArrayList;
 
 import hotel.app.android.hotel0.R;
+import hotel.app.android.hotel0.ui.aty.FlatServiceAty;
 import hotel.app.android.hotel0.ui.aty.OrderedFlatLongAty;
 import hotel.app.android.hotel0.ui.aty.OrderedFlatSmallAty;
 import hotel.app.android.hotel0.ui.aty.OrderedHotelAty;
+import hotel.app.android.hotel0.ui.aty.PayRecordAty;
 import hotel.app.android.hotel0.ui.aty.UserDetailsAty;
 import hotel.app.android.hotel0.ui.view.DetailsListBtnListView;
 import hotel.app.android.hotel0.ui.view.RoundImageView;
@@ -148,7 +150,7 @@ public class DetailsFrag extends KJFragment implements DetailsListBtnListView.On
      * 功能：点击底部Item 跳转消息记录
      */
     private void onClickItemPayNote() {
-
+        startActivity(new Intent(getActivity(), PayRecordAty.class));
     }
 
     /**
@@ -176,7 +178,7 @@ public class DetailsFrag extends KJFragment implements DetailsListBtnListView.On
      * 功能：点击底部Item 跳转底部公寓服务
      */
     private void onClickItemService() {
-
+        startActivity(new Intent(getActivity(), FlatServiceAty.class));
     }
     /*************************** 底部Button点击事件结束 *********************************/
     /***********************************************************************************/

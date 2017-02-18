@@ -14,6 +14,7 @@ import hotel.app.android.hotel0.R;
  * Created by Administrator on 2016-12-25.
  */
 public class OrderedFlatLongAdapter extends RecyclerView.Adapter<OrderedFlatLongAdapter.OrderedViewHolder> implements View.OnClickListener{
+    private static final int ID_ITEM_VIEW = 0X1234;
     private Context mContext;
     private String[] mType = {"合同生成中","退订金中","合同生成完毕","住房中"};
     private OnFlatLongButtonListener mOnFlatLongButtonListener;
@@ -39,10 +40,11 @@ public class OrderedFlatLongAdapter extends RecyclerView.Adapter<OrderedFlatLong
 
     @Override
     public void onBindViewHolder(OrderedViewHolder holder, int position) {
+
         holder.tvType.setText(mType[position]);
 
         holder.setPositionTag(position);
-
+        holder.itemView.setOnClickListener(this);
         holder.tvPayMoney.setOnClickListener(this);
         holder.tvFlatServicing.setOnClickListener(this);
         holder.tvFlatAgreement.setOnClickListener(this);
@@ -69,6 +71,9 @@ public class OrderedFlatLongAdapter extends RecyclerView.Adapter<OrderedFlatLong
             case R.id.tv_flatServicing:
                 mOnFlatLongButtonListener.onItemClickServicing((Integer) v.getTag());
                 break;
+            default:
+                mOnFlatLongButtonListener.onItemClick((Integer) v.getTag());
+
         }
     }
 
@@ -85,6 +90,7 @@ public class OrderedFlatLongAdapter extends RecyclerView.Adapter<OrderedFlatLong
             this.tvType = (TextView) itemView.findViewById(R.id.tv_type);
         }
         public void setPositionTag(int positionTag){
+            itemView.setTag(positionTag);
             tvFlatServicing.setTag(positionTag);
             tvFlatAgreement.setTag(positionTag);
             tvFlatQuit.setTag(positionTag);
@@ -92,6 +98,13 @@ public class OrderedFlatLongAdapter extends RecyclerView.Adapter<OrderedFlatLong
         }
     }
     public interface OnFlatLongButtonListener{
+
+        /**
+         * 点击item查看详情
+         * @param position
+         */
+        void  onItemClick(int position);
+
         /**
          * 点击申请服务
          * @param position 点击项

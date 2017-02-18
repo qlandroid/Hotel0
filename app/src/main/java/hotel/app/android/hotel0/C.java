@@ -9,4 +9,7 @@ public class C {
         public static final String HotelOutTime = "hotelOutTime";
         public static final String HotelAmountDay = "hotelAmountDay";
     }
+    public static class Request{
+        public static final int AddUser = 0x110;
+    }
 }

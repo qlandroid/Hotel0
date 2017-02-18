@@ -1,5 +1,6 @@
 package hotel.app.android.hotel0.ui.aty;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +10,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.kymjs.kjframe.ui.BindView;
+import org.kymjs.kjframe.ui.ViewInject;
 
+import hotel.app.android.hotel0.C;
 import hotel.app.android.hotel0.R;
 import hotel.app.android.hotel0.ui.adapter.OrderedFlatSmallAdapter;
 import hotel.app.android.hotel0.ui.base.BaseActivity;
@@ -62,12 +65,47 @@ public class OrderedFlatSmallAty extends BaseActivity implements OrderedFlatSmal
     }
 
     /********************************************************************************/
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == Activity.RESULT_OK){
+            switch (requestCode){
+                case C.Request.AddUser:
+                    ViewInject.toast("添加成功");
+                    break;
+            }
+        }
+    }
     /********************************************************************************/
     /***************************** Item中的点击事件 *********************************/
 
     @Override
     public void onItemClick(View v, int position) {
         startActivity(new Intent(this,OrderedFlatSmallDetailsAty.class));
+    }
+
+    @Override
+    public void onItemClickRefundAgreement(int position) {
+
+    }
+
+    @Override
+    public void onItemClickOutFlat(int position) {
+
+    }
+
+    @Override
+    public void onItemClickUnlocking(int position) {
+
+    }
+
+    @Override
+    public void onItemClickFlatAddUser(int position) {
+        startActivityForResult(new Intent(this,FlatAddUserAty.class),C.Request.AddUser);
+    }
+
+    @Override
+    public void onItemClickPayMoney(int position) {
+
     }
 
     /**************************** Item中的点击事件结束 ******************************/

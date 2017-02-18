@@ -97,7 +97,7 @@
                     android:layout_marginTop="@dimen/x6"
                     app:centrePadding="@dimen/x6"
                     app:content="2016年12月25日"
-                    app:name="入住时间" />
+                    app:name="入住日期" />
 
                 <hotel.app.android.hotel0.ui.view.NameTextView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="wrap_content"
@@ -105,7 +105,7 @@
                     android:layout_marginTop="@dimen/x6"
                     app:centrePadding="@dimen/x6"
                     app:content="2016年12月28日"
-                    app:name="离店时间" />
+                    app:name="离店日期" />
             </LinearLayout>
 
             <View style="@style/div_x" />

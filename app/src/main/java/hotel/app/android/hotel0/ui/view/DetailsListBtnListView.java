@@ -16,6 +16,7 @@ import java.util.List;
 import hotel.app.android.hotel0.R;
 
 /**
+ * 功能：个人信息中底部点击的列表
  * Created by Administrator on 2016-12-11.
  */
 public class DetailsListBtnListView extends RecyclerView {
@@ -35,12 +36,14 @@ public class DetailsListBtnListView extends RecyclerView {
     }
 
     private void init(Context mContext){
-        this.setLayoutManager(new LinearLayoutManager(mContext){
-            @Override
-            public boolean canScrollVertically() {
-                return false;
-            }
-        });
+        if (!isInEditMode()){
+            this.setLayoutManager(new LinearLayoutManager(mContext) {
+                @Override
+                public boolean canScrollVertically() {
+                    return false;
+                }
+            });
+        }
     }
     public void setOnItemClickListener(Context context,List<BtnBean> list,OnItemClickListener listener){
         DetailsBtnAdapter adapter = new DetailsBtnAdapter(context, list, listener);
