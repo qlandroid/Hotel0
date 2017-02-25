@@ -135,5 +135,18 @@ public abstract class BaseActivity  extends KJActivity {
     public void myChangeFragment(int resView,Fragment fragment){
 
     }
+    private final static int MIN_CLICK_TIME = 700;
+    private long lastTime ;
+    @Override
+    public void onClick(View v) {
+        super.onClick(v);
+        if (System.currentTimeMillis() - lastTime > MIN_CLICK_TIME){
+            forbidClick(v);
+            lastTime = System.currentTimeMillis();
+        }
+    }
 
+    public void forbidClick(View v){
+
+    }
 }

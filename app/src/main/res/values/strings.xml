@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">易住平台</string>
+    <string name="httpErrorHint">网络异常</string>
 </resources>

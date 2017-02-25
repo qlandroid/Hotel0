@@ -39,6 +39,7 @@
                 android:paddingTop="@dimen/x20">
 
                 <EditText
+                    android:id="@+id/et_loginAccount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="account:"
@@ -48,6 +49,7 @@
                     android:textSize="18sp" />
 
                 <EditText
+                    android:id="@+id/et_loginPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/x10"

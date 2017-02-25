@@ -50,15 +50,17 @@
         <!-- 百度地图结束 -->
         <activity
             android:name="cn.yizhupingtai.android.hotel.MainActivity"
-            android:windowSoftInputMode="stateHidden|stateUnchanged"></activity>
-        <activity
-            android:name="cn.yizhupingtai.android.hotel.ui.aty.HomeAty"
-            android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan">
+            android:windowSoftInputMode="stateHidden|stateUnchanged">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.yizhupingtai.android.hotel.ui.aty.HomeAty"
+            android:windowSoftInputMode="stateHidden|stateUnchanged|adjustPan">
+
         </activity>
         <activity
             android:name="cn.yizhupingtai.android.hotel.ui.aty.LoginAty"
