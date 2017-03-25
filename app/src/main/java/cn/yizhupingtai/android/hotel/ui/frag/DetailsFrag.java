@@ -147,7 +147,7 @@ public class DetailsFrag extends KJFragment implements DetailsListBtnListView.On
     }
 
     /**
-     * 功能：点击底部Item 跳转消息记录
+     * 功能：点击底部Item 跳转消费记录
      */
     private void onClickItemPayNote() {
         startActivity(new Intent(getActivity(), PayRecordAty.class));

@@ -8,11 +8,11 @@
         "source": "E:\\android_work_project\\Hotel0\\pulltoRefresh\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
     },
     {
-        "merged": "E:\\android_work_project\\Hotel0\\pulltoRefresh\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
-        "source": "E:\\android_work_project\\Hotel0\\pulltoRefresh\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
-    },
-    {
         "merged": "E:\\android_work_project\\Hotel0\\pulltoRefresh\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
         "source": "E:\\android_work_project\\Hotel0\\pulltoRefresh\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
+    },
+    {
+        "merged": "E:\\android_work_project\\Hotel0\\pulltoRefresh\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
+        "source": "E:\\android_work_project\\Hotel0\\pulltoRefresh\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
     }
 ]

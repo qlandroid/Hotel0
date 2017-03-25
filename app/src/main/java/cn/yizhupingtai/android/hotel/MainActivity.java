@@ -16,5 +16,6 @@ public class MainActivity extends BaseActivity {
     public void initData() {
         Intent intent = new Intent(this, LoginAty.class);
         startActivity(intent);
+        finish();
     }
 }

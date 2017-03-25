@@ -16,7 +16,9 @@ public class LoginContract {
         void display(String s);
         void showLoginDialog();
         void cancelDialog();
-
+        void showToAccount();
+        void showToPassword();
+        void closeAty();
     }
 
     public interface Presenter {

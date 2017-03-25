@@ -11,6 +11,9 @@ import android.widget.TextView;
 import org.kymjs.kjframe.ui.BindView;
 import org.kymjs.kjframe.ui.ViewInject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import cn.yizhupingtai.android.hotel.R;
 import cn.yizhupingtai.android.hotel.ui.adapter.OrderedFlatLongAdapter;
 import cn.yizhupingtai.android.hotel.ui.adapter.OrderedFlatLongAdapter.OnFlatLongButtonListener;
@@ -36,12 +39,29 @@ public class OrderedFlatLongAty extends BaseActivity implements OnFlatLongButton
         setContentView(R.layout.activity_ordered_flat_long_aty);
     }
 
+    private List list ;
+    @Override
+    public void initData() {
+        super.initData();
+        list = new ArrayList();
+        for (int i = 0; i < 5; i++) {
+            list.add(5);
+        }
+    }
+
+    public void addList(){
+        for (int i = 0; i < 5; i++) {
+            list.add(5);
+        }
+        mOrderedAdapter.update(list);
+    }
+
     @Override
     public void initWidget() {
         tvTitle.setText("已订长租公寓");
         ivToBack.setVisibility(View.VISIBLE);
         rvOrderedFlatLongList.setLayoutManager(new LinearLayoutManager(this));
-        mOrderedAdapter = new OrderedFlatLongAdapter(this);
+        mOrderedAdapter = new OrderedFlatLongAdapter(this,list);
         mOrderedAdapter.setOnFlatLongButtonListener(this);
         rvOrderedFlatLongList.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL));
         rvOrderedFlatLongList.setAdapter(mOrderedAdapter);

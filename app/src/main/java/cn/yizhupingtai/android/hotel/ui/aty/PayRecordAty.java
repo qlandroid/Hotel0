@@ -1,9 +1,11 @@
 package cn.yizhupingtai.android.hotel.ui.aty;
 
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 import org.kymjs.kjframe.ui.BindView;
 
@@ -18,14 +20,14 @@ import cn.yizhupingtai.android.hotel.ui.base.BaseActivity;
 /**
  * 功能：消费记录
  */
-public class PayRecordAty extends BaseActivity implements AdapterView.OnItemClickListener {
+public class PayRecordAty extends BaseActivity  {
 
     @BindView(id = R.id.tv_title)
     TextView tvTitle;
     @BindView(id = R.id.iv_toBack,click = true)
     View ivToBack;
     @BindView(id = R.id.lv_payRecordList)
-    ListView lvPayRecordList;
+    PullToRefreshListView lvPayRecordList;
 
     private PayRecordAdapter mPayRecordAdapter;
     private List<PayRecordBean> mPayList;
@@ -61,7 +63,18 @@ public class PayRecordAty extends BaseActivity implements AdapterView.OnItemClic
 
        mPayRecordAdapter = new PayRecordAdapter(this,mPayList,R.layout.item_pay_record_layout);
         lvPayRecordList.setAdapter(mPayRecordAdapter);
-        lvPayRecordList.setOnItemClickListener(this);
+        lvPayRecordList.setMode(PullToRefreshBase.Mode.BOTH);
+        lvPayRecordList.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
+            @Override
+            public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
+                refreshView.onRefreshComplete();
+            }
+
+            @Override
+            public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
+                refreshView.onRefreshComplete();
+            }
+        });
     }
 
     @Override
@@ -78,12 +91,4 @@ public class PayRecordAty extends BaseActivity implements AdapterView.OnItemClic
         finish();
     }
 
-    /******************************************************************************/
-    /******************************** item点击事件 ********************************/
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-    }
-    /******************************** item点击事件结束 ****************************/
-    /******************************************************************************/
 }

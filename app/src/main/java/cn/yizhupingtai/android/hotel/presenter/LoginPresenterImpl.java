@@ -1,6 +1,5 @@
 package cn.yizhupingtai.android.hotel.presenter;
 
-import cn.yizhupingtai.android.hotel.bean.UserBean;
 import cn.yizhupingtai.android.hotel.contract.LoginContract;
 import cn.yizhupingtai.android.hotel.model.LoginModelImpl;
 
@@ -24,15 +23,16 @@ public class LoginPresenterImpl implements LoginContract.Presenter {
         String account = mLoginView.getAccount();
         String password = mLoginView.getAccount();
         if (!isNotNull(account, password)) {
-            mLoginView.display("账号或密码不能为空");
             return;
         }
         mLoginView.showLoginDialog();
-        mLoginModeImpl.login(mLoginView.getAccount(), mLoginView.getPassword(), new LoginContract.OnLoginListener() {
+        mLoginView.toHomeAty();
+       /* mLoginModeImpl.login(mLoginView.getAccount(), mLoginView.getPassword(), new LoginContract.OnLoginListener() {
             @Override
             public void loginSuccess(UserBean userBean) {
-                //mLoginView.toHomeAty();
+                mLoginView.toHomeAty();
                 mLoginView.cancelDialog();
+                mLoginView.closeAty();
             }
 
             @Override
@@ -41,16 +41,18 @@ public class LoginPresenterImpl implements LoginContract.Presenter {
                 mLoginView.clearPassword();
                 mLoginView.cancelDialog();
             }
-        });
+        });*/
     }
 
     private boolean isNotNull(String account, String password) {
         if (account == null || account.isEmpty()) {
             mLoginView.display("账号不能为空");
+            mLoginView.showToAccount();
             return false;
         }
         if (password == null || password.isEmpty()) {
             mLoginView.display("密码不能为空");
+            mLoginView.showToPassword();
             return false;
         }
         return true;

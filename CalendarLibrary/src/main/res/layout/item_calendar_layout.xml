@@ -30,11 +30,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
-    <hotel.app.android.mylibrary.view.WeekView
+    <cn.yizhupingtai.android.mylibrary.view.WeekView
         android:id="@+id/rv_weekTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    <hotel.app.android.mylibrary.view.MonthDayView
+    <cn.yizhupingtai.android.mylibrary.view.MonthDayView
         android:id="@+id/mdv_monthDay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

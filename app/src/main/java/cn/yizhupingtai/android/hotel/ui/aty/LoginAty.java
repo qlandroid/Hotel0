@@ -140,7 +140,6 @@ public class LoginAty extends BaseActivity implements LoginContract.View {
     public void toHomeAty() {
         Intent intent = new Intent(this, HomeAty.class);
         startActivity(intent);
-        finish();
     }
 
     @Override
@@ -166,5 +165,26 @@ public class LoginAty extends BaseActivity implements LoginContract.View {
     @Override
     public void cancelDialog() {
         mLoginDialog.cancel();
+    }
+
+    @Override
+    public void showToAccount() {
+        showToView(etLoginAccount);
+    }
+
+    private void showToView(View view) {
+        view.setFocusable(true);
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+    }
+
+    @Override
+    public void showToPassword() {
+        showToView(etLoginPassword);
+    }
+
+    @Override
+    public void closeAty() {
+        finish();
     }
 }

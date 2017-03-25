@@ -54,6 +54,7 @@ public class FlatServiceAty extends BaseActivity implements AdapterView.OnItemCl
         tvTitle.setText("申请服务列表");
         ivToBack.setVisibility(ImageView.VISIBLE);
         mFlatServiceAdapter = new FlatServiceAdapter(this,mServiceBeanList,R.layout.item_flat_service_layout);
+        mServiceListView.setAdapter(mFlatServiceAdapter);
         mServiceListView.setMode(PullToRefreshBase.Mode.BOTH);
         mServiceListView.setOnItemClickListener(this);
         mServiceListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
